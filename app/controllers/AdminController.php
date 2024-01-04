@@ -6,6 +6,6 @@ class AdminController extends Controller{
         
     }
     public function index(){
-        echo "admin home";
+        echo "admin home";//ihihhihi
     }
 }
