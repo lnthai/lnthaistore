@@ -1,4 +1,4 @@
-<?php $this->view('inc/header', $data); ?>
-<?php $this->view('inc/sidebar'); ?>
-<?php require_once "./app/views/pages/" . $data['pages'] . ".php"; ?>
-<?php $this->view('inc/footer', $data); ?>
+<?php $this->view('inc/admin/header', $data); ?>
+<?php $this->view('inc/admin/sidebar'); ?>
+<?php require_once "./app/views/pages/admin/" . $data['pages'] . ".php"; ?>
+<?php $this->view('inc/admin/footer', $data); ?>
