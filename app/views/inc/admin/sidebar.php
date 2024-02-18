@@ -7,77 +7,38 @@
   <div class="menu is-menu-main">
     <ul class="menu-list" id="menu">
       <li id="sidebar">
-        <a class="ajax-link" href="javascript:void(0)" onclick="loadPage('/admin/',this)">
+        <a class="ajax-link" <?= (($_SERVER['REQUEST_URI'] === '/admin')) ? "style='background: #e5e7eb1c;'" : '' ?> href="javascript:void(0)" onclick="loadPage('/admin',this)">
           <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
           <span class="menu-item-label">Trang chủ</span>
         </a>
-      </li> 
+      </li>
     </ul>
     <ul class="menu-list" id="menu">
       <li class="--set-active-tables-html" id="sidebar">
-        <a class="ajax-link" href="javascript:void(0)" onclick="loadPage('/admin/order/list',this)">
+        <a class="ajax-link" <?= (($_SERVER['REQUEST_URI'] === '/admin/order/list') || ($_SERVER['REQUEST_URI'] === '/admin/order')) ? "style='background: #e5e7eb1c;'" : '' ?> href="javascript:void(0)" onclick="loadPage('/admin/order/list',this)">
           <span class="icon"><i class="mdi mdi-table"></i></span>
           <span class="menu-item-label">Đơn hàng</span>
         </a>
       </li>
       <li class="--set-active-forms-html">
-        <a href="forms.html">
+        <a class="ajax-link" <?= (($_SERVER['REQUEST_URI'] === '/admin/product/list') || ($_SERVER['REQUEST_URI'] === '/admin/product')) ? "style='background: #e5e7eb1c;'" : '' ?> href="javascript:void(0)" onclick="loadPage('/admin/product/list',this)">
+          <span class="icon"><i class="mdi mdi-cube-outline"></i></span>
+          <span class="menu-item-label">Sản phẩm</span>
+        </a>
+      </li>
+      <!-- <li class="--set-active-forms-html">
+        <a class="ajax-link" <?= (($_SERVER['REQUEST_URI'] === '/admin/category/list') || ($_SERVER['REQUEST_URI'] === '/admin/category')) ? "style='background: #e5e7eb1c;'" : '' ?> href="javascript:void(0)">
           <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
-          <span class="menu-item-label">Forms</span>
+          <span class="menu-item-label">Danh mục</span>
         </a>
-      </li>
+      </li> -->
       <li class="--set-active-profile-html">
-        <a href="profile.html">
+        <a class="ajax-link" <?= (($_SERVER['REQUEST_URI'] === '/admin/user/list') || ($_SERVER['REQUEST_URI'] === '/admin/user')) ? "style='background: #e5e7eb1c;'" : '' ?> href="javascript:void(0)" onclick="loadPage('/admin/user/list',this)">
           <span class="icon"><i class="mdi mdi-account-circle"></i></span>
-          <span class="menu-item-label">Profile</span>
+          <span class="menu-item-label">Người dùng</span>
         </a>
       </li>
-      <li>
-        <a href="login.html">
-          <span class="icon"><i class="mdi mdi-lock"></i></span>
-          <span class="menu-item-label">Login</span>
-        </a>
-      </li>
-      <li>
-        <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-view-list"></i></span>
-          <span class="menu-item-label">Submenus</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
-        </a>
-        <ul>
-          <li>
-            <a href="#void">
-              <span>Sub-item One</span>
-            </a>
-          </li>
-          <li>
-            <a href="#void">
-              <span>Sub-item Two</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <p class="menu-label">About</p>
-    <ul class="menu-list">
-      <li>
-        <a href="https://justboil.me" onclick="alert('Coming soon'); return false" target="_blank" class="has-icon">
-          <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
-          <span class="menu-item-label">Premium Demo</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://justboil.me/tailwind-admin-templates" class="has-icon">
-          <span class="icon"><i class="mdi mdi-help-circle"></i></span>
-          <span class="menu-item-label">About</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/justboil/admin-one-tailwind" class="has-icon">
-          <span class="icon"><i class="mdi mdi-github-circle"></i></span>
-          <span class="menu-item-label">GitHub</span>
-        </a>
-      </li>
+
     </ul>
   </div>
 </aside>
