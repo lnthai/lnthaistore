@@ -20,7 +20,7 @@
   </div>
 </section>
 
-  <section class="section main-section">
+  <!-- <section class="section main-section">
     <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
       <div class="card">
         <div class="card-content">
@@ -405,4 +405,4 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
